@@ -1,0 +1,26 @@
+{
+  "name": "api-sustain",
+  "version": "1.0.0",
+  "description": "API Sustain",
+  "main": "loader.js",
+  "scripts": {
+    "start": "npm run loader.js",
+    "dev": "nodemon",
+    "production": "pm2 start loader.js --name backend"
+  },
+  "author": "Paulo Leite",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-query-int": "^3.0.0",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.4.7",
+    "node-restful": "^0.2.6",
+    "nodemon": "^1.18.9",
+    "pm2": "^3.2.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
