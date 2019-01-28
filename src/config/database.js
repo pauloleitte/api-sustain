@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
+const env = require('../../.env')
 mongoose.Promise = global.Promise
 
-const url = process.env.PROD_MONGODB || 'mongodb://paulo:12345@ds125469.mlab.com:25469/heroku_pdq2l8td'
+const url = process.env.PROD_MONGODB || env.urlMongoDB
 
 module.exports = mongoose.connect(url, {useNewUrlParser: true})
 
