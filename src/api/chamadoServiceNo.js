@@ -24,7 +24,7 @@ const cadastrarChamado = (req, res) => {
             newChamado.save(err => {
                 if (err) { return sendErrorsFromDB(res, err) }
                 else {
-                    return res.status(200).send({ mensagem: `Chamado cadastro com sucesso. ${newChamado._id}`,
+                    return res.status(200).send({ mensagem: `Chamado cadastro com sucesso.`,
                                                   ID_DB: `${newChamado._id}` })
                 }
             })
@@ -32,9 +32,9 @@ const cadastrarChamado = (req, res) => {
     })
 }
 
-const exlcuirChamado = (req, res) => {
+const excluirChamado = (req, res) => {
     const id_incidente = req.body.id_incidente || ''
-    chamado.findOneAndRemove({ id_incidente }, (err, chamado) => {
+    chamado.findOneAndDelete({ id_incidente }, (err, chamado) => {
         if (err) {
             return sendErrorsFromDB(res, err)
         } else if (!chamado) {
@@ -64,4 +64,4 @@ const atualizarChamado = (req, res) => {
     )
 }
 
-module.exports = { cadastrarChamado, exlcuirChamado, atualizarChamado }
+module.exports = { cadastrarChamado, excluirChamado, atualizarChamado }

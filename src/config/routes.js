@@ -13,7 +13,7 @@ module.exports = function (server) {
     chamadoService.register(router, '/chamado')
 
     router.post('/chamadoNo', chamadoServiceNo.cadastrarChamado)
-    router.delete('/chamadoNo', chamadoServiceNo.exlcuirChamado)
+    router.delete('/chamadoNo', chamadoServiceNo.excluirChamado)
     router.put('/chamadoNo', chamadoServiceNo.atualizarChamado)
 
 

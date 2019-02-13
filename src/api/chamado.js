@@ -1,5 +1,6 @@
 const restful = require('node-restful')
 const mongoose = restful.mongoose
+mongoose.set('useFindAndModify', false);
 
 const chamadoSchema = new mongoose.Schema({
     id_incidente: { type: String, required: true },
