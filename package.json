@@ -4,7 +4,7 @@
   "description": "API Sustain",
   "main": "loader.js",
   "scripts": {
-    "start": "npm run loader.js",
+    "start": "node loader.js",
     "dev": "nodemon",
     "production": "pm2 start loader.js --name backend"
   },
