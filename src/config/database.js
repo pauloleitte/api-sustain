@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
-const env = require('../../.env')
+//const env = require('../../.env')
 mongoose.Promise = global.Promise
 
-const url = process.env.PROD_MONGODB || env.urlMongoDBAWS
+const url = process.env.PROD_MONGODB 
 
 module.exports = mongoose.connect(url, {useNewUrlParser: true})
 
